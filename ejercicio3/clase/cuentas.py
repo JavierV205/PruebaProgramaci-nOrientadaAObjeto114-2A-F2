@@ -18,7 +18,7 @@ class Cuenta:
         self.__saldo = valor
 
     def depositar(self, monto):
-        if monto <= 0:
+        if monto >= 0:
             raise Exception("EL DEPÓSITO DEBE SER MAYOR A 0.")
         self.saldo += monto
         self.movimientos.append(f"DEPÓSITO: {monto:.2f}")
